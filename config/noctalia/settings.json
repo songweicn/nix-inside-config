@@ -19,7 +19,7 @@
         "overviewLayer": false,
         "pinnedApps": [
         ],
-        "position": "follow_bar",
+        "position": "top_center",
         "screenshotAnnotationTool": "",
         "showCategories": false,
         "showIconBackground": false,
@@ -231,7 +231,7 @@
                 "id": "calendar-month-card"
             },
             {
-                "enabled": false,
+                "enabled": true,
                 "id": "weather-card"
             }
         ]
@@ -308,7 +308,7 @@
         }
     },
     "desktopWidgets": {
-        "enabled": false,
+        "enabled": true,
         "gridSnap": false,
         "gridSnapScale": true,
         "monitorWidgets": [
@@ -361,7 +361,7 @@
         "animationDisabled": false,
         "animationSpeed": 1.3,
         "autoStartAuth": false,
-        "avatarImage": "",
+        "avatarImage": "/home/weis/Pictures/David 2025.jpg",
         "boxRadiusRatio": 1,
         "clockFormat": "hh\\nmm",
         "clockStyle": "analog",
@@ -447,18 +447,18 @@
         "suspendTimeout": 1800
     },
     "location": {
-        "analogClockInCalendar": false,
-        "autoLocate": false,
+        "analogClockInCalendar": true,
+        "autoLocate": true,
         "firstDayOfWeek": -1,
-        "hideWeatherCityName": false,
-        "hideWeatherTimezone": false,
-        "name": "kottayam",
+        "hideWeatherCityName": true,
+        "hideWeatherTimezone": true,
+        "name": "Winnipeg",
         "showCalendarEvents": true,
         "showCalendarWeather": true,
         "showWeekNumberInCalendar": false,
-        "use12hourFormat": false,
+        "use12hourFormat": true,
         "useFahrenheit": false,
-        "weatherEnabled": false,
+        "weatherEnabled": true,
         "weatherShowEffects": true,
         "weatherTaliaMascotAlways": false
     },
@@ -676,7 +676,7 @@
     },
     "wallpaper": {
         "automationEnabled": false,
-        "directory": "/home/stephin/Pictures/Wallpapers",
+        "directory": "/home/weis/Pictures/Wallpapers",
         "enableMultiMonitorDirectories": false,
         "enabled": true,
         "favorites": [
@@ -814,7 +814,7 @@
         "monitorDirectories": [
         ],
         "overviewBlur": 0.38,
-        "overviewEnabled": false,
+        "overviewEnabled": true,
         "overviewTint": 0.27,
         "panelPosition": "follow_bar",
         "randomIntervalSec": 300,
