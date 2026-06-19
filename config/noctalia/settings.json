@@ -18,6 +18,10 @@
         "ignoreMouseInput": false,
         "overviewLayer": false,
         "pinnedApps": [
+            "com.mitchellh.ghostty",
+            "firefox",
+            "org.gnome.Nautilus",
+            "google-chrome"
         ],
         "position": "top_center",
         "screenshotAnnotationTool": "",
@@ -832,7 +836,7 @@
             "wipe",
             "honeycomb"
         ],
-        "useOriginalImages": false,
+        "useOriginalImages": true,
         "useSolidColor": false,
         "useWallhaven": false,
         "viewMode": "recursive",
