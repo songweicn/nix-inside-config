@@ -1,0 +1,15 @@
+# caches
+.cache/
+
+# vim / helix swap
+*.swp
+*.swo
+
+# backup files
+*.bak
+
+# fish runtime state
+config/fish/fish_variables
+
+# macOS
+.DS_Store
