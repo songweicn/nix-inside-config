@@ -675,7 +675,7 @@
         "translucentWidgets": true
     },
     "wallpaper": {
-        "automationEnabled": false,
+        "automationEnabled": true,
         "directory": "/home/weis/Pictures/Wallpapers",
         "enableMultiMonitorDirectories": false,
         "enabled": true,
@@ -820,10 +820,10 @@
         "randomIntervalSec": 300,
         "setWallpaperOnAllMonitors": true,
         "showHiddenFiles": true,
-        "skipStartupTransition": false,
+        "skipStartupTransition": true,
         "solidColor": "#1a1a2e",
         "sortOrder": "name",
-        "transitionDuration": 1200,
+        "transitionDuration": 1500,
         "transitionEdgeSmoothness": 0.05,
         "transitionType": [
             "fade",
