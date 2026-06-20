@@ -1,0 +1,5 @@
+colloid-gtk-theme-git
+google-chrome
+noctalia-shell
+onlyoffice-bin
+wechat-appimage
