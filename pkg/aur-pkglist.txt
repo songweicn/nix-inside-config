@@ -1,0 +1,5 @@
+colloid-gtk-theme-git
+google-chrome
+onlyoffice-bin
+sleepyneko-git
+wechat-appimage
