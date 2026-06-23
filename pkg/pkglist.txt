@@ -3,9 +3,7 @@ accountsservice
 alsa-firmware
 alsa-plugins
 alsa-utils
-ark
 aspell
-aurorae
 b43-fwcutter
 base
 base-devel
@@ -101,7 +99,6 @@ gst-plugin-pipewire
 gst-plugins-bad
 gst-plugins-ugly
 gst-plugin-va
-gwenview
 haveged
 hdparm
 helix
@@ -117,19 +114,13 @@ iwd
 jfsutils
 jq
 just
-kactivitymanagerd
 kde-cli-tools
 kdecoration
 kde-gtk-config
 kdenlive
 kernel-install-for-dracut
-kglobalacceld
 kimageformats
-knighttime
-konsole
 kpipewire
-ksystemstats
-kwallet-pam
 kwayland
 kwayland-integration
 layer-shell-qt
@@ -188,9 +179,7 @@ pipewire-alsa
 pipewire-jack
 pipewire-pulse
 pkgfile
-plasma5support
 plasma-activities
-plasma-activities-stats
 plocate
 poppler-glib
 power-profiles-daemon
