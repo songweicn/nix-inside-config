@@ -13,8 +13,6 @@ bind
 blender
 bluez
 bluez-utils
-breeze-cursors
-breeze-plymouth
 btop
 btrfs-progs
 cage
@@ -109,7 +107,6 @@ iwd
 jfsutils
 jq
 just
-kdecoration
 kdenlive
 kernel-install-for-dracut
 kimageformats
@@ -123,7 +120,6 @@ libappindicator
 libdvdcss
 libgsf
 libopenraw
-libplasma
 libva-intel-driver
 linux
 linux-firmware
@@ -153,10 +149,8 @@ nss-mdns
 ntfs-3g
 ntp
 obsidian
-ocean-sound-theme
 onlyoffice-bin
 openssh
-oxygen-cursors
 pacman-contrib
 pavucontrol
 perl
@@ -164,7 +158,6 @@ pipewire-alsa
 pipewire-jack
 pipewire-pulse
 pkgfile
-plasma-activities
 plocate
 poppler-glib
 power-profiles-daemon
@@ -172,7 +165,6 @@ python
 python-defusedxml
 python-jinja
 python-packaging
-qqc2-breeze-style
 qt6-imageformats
 qt6-wayland
 rclone
@@ -198,7 +190,6 @@ ttf-dejavu
 ttf-jetbrains-mono-nerd
 ttf-liberation
 ttf-opensans
-union
 unrar
 unzip
 upower
