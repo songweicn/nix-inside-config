@@ -4,7 +4,6 @@ alsa-firmware
 alsa-plugins
 alsa-utils
 aspell
-b43-fwcutter
 base
 base-devel
 bash-completion
@@ -51,7 +50,6 @@ dialog
 diffutils
 dmidecode
 dmraid
-dnsmasq
 dosfstools
 downgrade
 dracut
@@ -104,7 +102,6 @@ intel-ucode
 inxi
 iptables
 iwd
-jfsutils
 jq
 just
 kdenlive
@@ -132,15 +129,12 @@ man-db
 man-pages
 mdadm
 mesa-utils
-modemmanager
 mtools
 neovim
-netctl
 networkmanager
 networkmanager-openconnect
 networkmanager-openvpn
 nfs-utils
-nilfs-utils
 noto-fonts
 noto-fonts-cjk
 noto-fonts-emoji
