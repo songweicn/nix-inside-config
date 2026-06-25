@@ -16,7 +16,6 @@ fcitx5/conf/notifications.conf
 
 !rclone/
 !rclone/**
-rclone/rclone.conf
 
 !nvim/
 !nvim/**
