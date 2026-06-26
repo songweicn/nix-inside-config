@@ -22,3 +22,8 @@ fcitx5/conf/notifications.conf
 
 !pkg/
 !pkg/**
+
+!systemd/
+!systemd/**
+
+!README.md

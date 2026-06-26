@@ -1,0 +1,7 @@
+[Unit]
+Description=OneDrive Documents Bisync
+After=network-online.target
+
+[Service]
+Type=oneshot
+ExecStart=%h/.config/rclone/bisync-documents.sh
