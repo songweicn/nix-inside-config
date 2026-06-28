@@ -13,6 +13,7 @@
 !fcitx5/
 !fcitx5/**
 fcitx5/conf/notifications.conf
+fcitx5/conf/cached_layouts
 
 !rclone/
 !rclone/**
@@ -25,5 +26,7 @@ fcitx5/conf/notifications.conf
 
 !systemd/
 !systemd/**
+systemd/user/default.target.wants/
+systemd/user/timers.target.wants/
 
 !README.md
