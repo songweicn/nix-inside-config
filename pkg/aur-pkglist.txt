@@ -1,4 +1,0 @@
-colloid-gtk-theme-git
-google-chrome
-onlyoffice-bin
-wechat-appimage
