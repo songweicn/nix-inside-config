@@ -2,7 +2,7 @@
 
 {
   imports = [
-    ./machine.nix
+    ./host.link
   ];
 
   # ===== Base =====
@@ -14,7 +14,6 @@
 
   nixpkgs.config.allowUnfree = true;
 
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
   nix.settings.auto-optimise-store = true;
 
   nix.gc = {
@@ -22,11 +21,6 @@
     dates = "weekly";
     options = "--delete-older-than 30d";
   };
-
-  nix.nixPath = [
-    "nixpkgs=/nix/var/nix/profiles/per-user/root/channels/nixos"
-    "nixos-config=/etc/nixos/configuration.nix"
-  ];
 
   # ===== Bootloader =====
   boot.loader = {
@@ -48,7 +42,6 @@
     allowedTCPPorts = [
       22 # SSH
     ];
-    allowedUDPPorts = [ ];
   };
 
   # ===== Users =====
@@ -74,9 +67,11 @@
 
   # ===== Wayland =====
   environment.sessionVariables = {
-    NIXOS_OZONE_WL = "1";
+    EDITOR = "hx";
     MOZ_ENABLE_WAYLAND = "1";
+    NIXOS_OZONE_WL = "1";
   };
+
 
   # ===== Shell / Git / Editor =====
   programs.fish.enable = true;
@@ -89,14 +84,13 @@
     };
   };
 
-  environment.variables.EDITOR = "hx";
+  environment.sessionVariables.EDITOR = "hx";
 
   # ===== Common Services =====
   virtualisation.docker.enable = true;
 
   services.openssh.enable = true;
   services.tailscale.enable = true;
-  services.printing.enable = true;
   services.flatpak.enable = true;
 
   services.journald.extraConfig = ''
@@ -110,6 +104,9 @@
     # System
     fastfetch
     tree
+    eza
+    zip
+    unzip
     btop
 
     # Security
