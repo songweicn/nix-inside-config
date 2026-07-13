@@ -1,0 +1,49 @@
+[[mgr.prepend_keymap]]
+desc = "Chmod on selected files"
+on = ["c", "m"]
+run = "plugin chmod"
+
+[[mgr.prepend_keymap]]
+desc = "Smart Filter"
+on = ["F"]
+run = "plugin smart-filter"
+
+[[mgr.prepend_keymap]]
+desc = "Search file by content"
+on = ["S"]
+run = "plugin fr rg"
+
+[[mgr.prepend_keymap]]
+desc = "Copy"
+on = ["y"]
+run = "plugin ucp copy"
+
+[[mgr.prepend_keymap]]
+desc = "Paste"
+on = ["p"]
+run = "plugin ucp paste"
+
+[[mgr.prepend_keymap]]
+desc = "Open Recycle Bin menu"
+on = ["R", "b"]
+run = "plugin recycle-bin"
+
+[[mgr.prepend_keymap]]
+desc = "Toggle a tag"
+on = ["T", "t", "K"]
+run = "plugin simple-tag -- toggle-tag"
+
+[[mgr.prepend_keymap]]
+desc = "Add a tag"
+on = ["T", "a", "k"]
+run = "plugin simple-tag -- add-tag"
+
+[[mgr.prepend_keymap]]
+desc = "Remove a tag"
+on = ["T", "d", "k"]
+run = "plugin simple-tag -- remove-tag"
+
+[[mgr.prepend_keymap]]
+desc = "Filter only untagged items"
+on = ["T", "n"]
+run = "plugin simple-tag -- filter --mode=not"

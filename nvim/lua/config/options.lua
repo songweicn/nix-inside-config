@@ -1,3 +1,51 @@
--- Options are automatically loaded before lazy.nvim startup
--- Default options that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/options.lua
--- Add any additional options here
+vim.g.mapleader = ","
+vim.g.maplocalleader = ","
+
+vim.opt.exrc = true
+
+-- Basic settings
+vim.opt.number = true
+vim.opt.relativenumber = true
+vim.opt.cursorline = true
+vim.opt.wrap = false
+vim.opt.scrolloff = 99
+-- vim.opt.scrolloffpad = 1
+vim.opt.sidescrolloff = 8
+
+-- Indentation
+vim.opt.tabstop = 2
+vim.opt.shiftwidth = 2
+vim.opt.softtabstop = 2
+vim.opt.expandtab = true
+vim.opt.smartindent = true
+vim.opt.autoindent = true
+
+-- Search settings
+vim.opt.ignorecase = true
+vim.opt.smartcase = true
+vim.opt.hlsearch = true
+vim.opt.incsearch = true
+
+-- Visual settings
+vim.opt.termguicolors = true
+vim.opt.winborder = "rounded"
+vim.opt.signcolumn = "yes"
+vim.opt.showmode = false
+vim.opt.pumheight = 10 -- Pop up menu height
+
+-- File handling
+vim.opt.undofile = true
+vim.opt.swapfile = false
+
+-- Behavior settings
+vim.opt.hidden = true
+vim.opt.backspace = "indent,eol,start" -- Better backspace behavior
+vim.opt.clipboard = "unnamedplus"
+vim.g.root_spec = { ".git", "cwd" } -- Prioritize .git folders over whatever the LSP thinks the root is
+
+-- Cursor settings
+vim.opt.guicursor =
+  "n-v-c:block-Cursor/lCursor-blinkwait1000-blinkon100-blinkoff100,i-ci:ver25-Cursor/lCursor,r-cr:hor20-Cursor/lCursor"
+
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1

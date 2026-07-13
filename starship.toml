@@ -1,0 +1,39 @@
+add_newline = false
+format = "$directory $git_branch $git_status $fill $python $lua $nodejs $golang $haskell $rust $ruby $package $aws$docker_context $jobs $cmd_duration $line_break $character"
+
+[character]
+error_symbol = "[ ](bold fg:red)"
+success_symbol = "[ ](bold fg:purple)"
+vimcmd_replace_one_symbol = "[ ](bold fg:green)"
+vimcmd_replace_symbol = "[ ](bold fg:green)"
+vimcmd_symbol = "[ ](bold fg:yellow)"
+vimcmd_visual_symbol = "[ ](bold fg:blue)"
+
+[directory]
+format = "[](bold fg:black)[$path]($style)[](bold fg:black)"
+style = "bold bg:black fg:bright-white"
+truncation_length = 6
+truncation_symbol = "../"
+
+[fill]
+symbol = " "
+
+[git_branch]
+format = "[](bold fg:black)[$symbol $branch(:$remote_branch)](bold fg:blue bg:black)[](bold fg:black)"
+symbol = ""
+truncation_length = 12
+truncation_symbol = ""
+
+[git_status]
+ahead = " "
+behind = " "
+deleted = " "
+format = "[$modified$deleted$untracked$ahead_behind]($style) "
+modified = " "
+style = "bold purple"
+untracked = " "
+up_to_date = " "
+
+[profiles]
+rtransient = "$status$cmd_duration$time"
+transient = "$character"

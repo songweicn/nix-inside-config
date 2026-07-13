@@ -96,7 +96,7 @@
 "ui.menu" = { fg = "onSurface", bg = "surfaceContainer" }
 "ui.menu.selected" = { fg = "onPrimary", bg = "primary", modifiers = ["bold"] }
 
-"ui.selection" = { bg = "primary", fg = "onPrimary" }
+"ui.selection" = { bg = "primaryContainer", fg = "onPrimaryContainer" }
 
 "ui.highlight" = { bg = "primaryContainer", modifiers = ["bold"] }
 
@@ -124,39 +124,39 @@ plus = "#a6e3a1"
 delta = "#89b4fa"
 
 # Template colors
-primary = "#3b4586"
-surfaceTint = "#3b4586"
-onPrimary = "#ffffff"
-primaryContainer = "#535da0"
-onPrimaryContainer = "#d9dcff"
+primary = "#98971a"
+surfaceTint = "#98971a"
+onPrimary = "#fbf1c7"
+primaryContainer = "#d9d98b"
+onPrimaryContainer = "#41410b"
 
-secondary = "#595d79"
-onSecondary = "#ffffff"
-secondaryContainer = "#dbddff"
-onSecondaryContainer = "#5d617d"
+secondary = "#d79921"
+onSecondary = "#fbf1c7"
+secondaryContainer = "#ecdcbf"
+onSecondaryContainer = "#422f0a"
 
-tertiary = "#6f3568"
-onTertiary = "#ffffff"
-tertiaryContainer = "#8a4d81"
-onTertiaryContainer = "#ffd2f3"
+tertiary = "#458588"
+onTertiary = "#fbf1c7"
+tertiaryContainer = "#add1d3"
+onTertiaryContainer = "#1a3233"
 
-error = "#ba1a1a"
-onError = "#ffffff"
-errorContainer = "#ffdad6"
-onErrorContainer = "#93000a"
+error = "#cc241d"
+onError = "#fbf1c7"
+errorContainer = "#e9b5b3"
+onErrorContainer = "#430c0a"
 
-background = "#fbf8ff"
-onBackground = "#1b1b20"
-surface = "#fbf8ff"
-onSurface = "#1b1b20"
-surfaceVariant = "#e3e1ee"
-onSurfaceVariant = "#454650"
+background = "#fbf1c7"
+onBackground = "#3c3836"
+surface = "#fbf1c7"
+onSurface = "#3c3836"
+surfaceVariant = "#ebdbb2"
+onSurfaceVariant = "#7c6f64"
 
-outline = "#767681"
-outlineVariant = "#c6c5d2"
+outline = "#9e8861"
+outlineVariant = "#bbac90"
 
-surfaceContainerLowest = "#ffffff"
-surfaceContainerLow = "#f5f2f9"
-surfaceContainer = "#efedf3"
-surfaceContainerHigh = "#eae7ed"
-surfaceContainerHighest = "#e4e1e8"
+surfaceContainerLowest = "#f7ecc2"
+surfaceContainerLow = "#f3e6bc"
+surfaceContainer = "#ebdbb2"
+surfaceContainerHigh = "#e7d3a2"
+surfaceContainerHighest = "#e3cc92"

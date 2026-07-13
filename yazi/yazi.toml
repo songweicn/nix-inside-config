@@ -1,0 +1,11 @@
+[[plugin.prepend_fetchers]]
+group = "simple-tag"
+id = "simple-tag"
+run = "simple-tag"
+url = "*"
+
+[[plugin.prepend_fetchers]]
+group = "simple-tag"
+id = "simple-tag"
+run = "simple-tag"
+url = "*/"
