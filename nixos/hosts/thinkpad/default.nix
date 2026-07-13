@@ -109,8 +109,7 @@
 
     # Theme
     noctalia-shell
-    dms-shell
-  ];
+    ];
   
   # ===== Power Management =====
 
