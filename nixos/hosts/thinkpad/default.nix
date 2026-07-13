@@ -6,16 +6,15 @@
   ];
 
   # ===== Identity =====
-
   networking.hostName = "thinkpad";
 
-  # ===== Desktop =====
+  # ===== system services =====
+  services.printing.enable = true;
 
+  # ===== Desktop =====
   services.desktopManager.gnome.enable = true;
   services.displayManager.gdm.enable = true;
-
   programs.niri.enable = true;
-
   programs.xwayland.enable = true;
 
   xdg.portal = {
