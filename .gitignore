@@ -1,5 +1,9 @@
 *
 !.gitignore
+!README.md
+
+!nixos/
+!nixos/**
 
 !fish/
 !fish/**
@@ -16,18 +20,53 @@ fcitx5/conf/notifications.conf
 fcitx5/conf/cached_layouts
 fcitx5/conf/classicui.conf
 
-!rclone/
-!rclone/**
+!niri/
+!niri/**
+
+!noctalia/
+!noctalia/**
 
 !nvim/
 !nvim/**
 
-!pkg/
-!pkg/**
+!starship.toml
+
+!git/
+!git/**
+
+!gh/
+!gh/**
+
+!lazygit/
+!lazygit/**
+
+!mpv/
+!mpv/**
+
+!qt5ct/
+!qt5ct/**
+
+!qt6ct/
+!qt6ct/**
+
+!rclone/
+!rclone/**
+
+!superfile/
+!superfile/**
 
 !systemd/
 !systemd/**
-systemd/user/default.target.wants/
-systemd/user/timers.target.wants/
+systemd/user/*.wants/
 
-!README.md
+!yazi/
+!yazi/**
+
+!zathura/
+!zathura/**
+
+!zed/
+!zed/**
+
+!mimeapps.list
+!user-dirs.dirs
