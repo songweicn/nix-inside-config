@@ -38,8 +38,7 @@ This repository is simply a curated subset of `~/.config`.
 ├── README.md
 ├── .gitignore
 ├── justfile
-│
-├── nixos
+├── nixos #Hi,NixOSer I'm here.
 ├── cosmic
 ├── fastfetch
 ├── fcitx5
@@ -50,15 +49,12 @@ This repository is simply a curated subset of `~/.config`.
 ├── nvim
 ├── yazi
 ├── systemd
-│
 ├── git
 ├── gh
 ├── lazygit
 ├── superfile
 │
-├── mimeapps.list
-├── starship.toml
-└── user-dirs.dirs
+└── starship.toml
 ```
 
 ---
