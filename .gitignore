@@ -70,3 +70,6 @@ systemd/user/*.wants/
 
 !mimeapps.list
 !user-dirs.dirs
+
+!GIMP/
+!GIMP/**
