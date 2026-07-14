@@ -5,6 +5,9 @@
 !nixos/
 !nixos/**
 
+!fastfetch/
+!fastfetch/**
+
 !fish/
 !fish/**
 
@@ -86,4 +89,3 @@ GIMP/3.0/tags.xml
 
 # Cache / Generated
 GIMP/3.0/tmp/
-GIMP/3.0/internal-data/
