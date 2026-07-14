@@ -1,191 +1,56 @@
-# nix-inside-config
+# You found it. 👋
 
-> A Linux configuration repository with **Nix inside**, not around.
+If you're here, chances are you're like me:
 
-Unlike most NixOS repositories, this project is **not centered around Flakes, Home Manager, or large module hierarchies**.
+You enjoy NixOS, but you're not quite sold on Flakes or Home Manager yet.
 
-Instead, it is built around a much simpler idea:
+Maybe you've also opened someone else's configuration repository and wondered:
 
-> Keep every configuration file where it naturally belongs, and manage it with Git only after it becomes a stable, intentionally maintained configuration.
+> "Where is the actual configuration?"
 
-The repository currently has:
+This folder is my attempt to answer that question.
 
-- No Flakes
-- No Home Manager
-- No GNU Stow
-- No unnecessary modules
-- No abstraction for the sake of abstraction
+Ignore everything outside this directory.
 
-Most Nix files are well under 200 lines.
-
-Instead of splitting one file into dozens of modules, the goal is to keep **the smallest number of Nix files while remaining readable**.
-
-Configuration stays **at its original location**, and Git manages the final result instead of generating configuration somewhere else.
-
----
-
-# Repository Layout
-
-The repository is simply a curated subset of `~/.config`.
-
-Only directories that are intentionally maintained are tracked.
+Ignoring `hardware-configuration.nix`, there are really only **three `.nix` files** and **one symbolic link**.
 
 ```text
-~/.config
-├── README.md
-├── .gitignore
-├── justfile
-│
-├── nixos
-├── cosmic
-├── fish
-├── ghostty
-├── helix
-├── nvim
-├── fastfetch
-├── GIMP
-├── fcitx5
-├── yazi
-├── systemd
-│
-├── git
-├── gh
-├── lazygit
-├── superfile
-│
-├── mimeapps.list
-├── user-dirs.dirs
-└── starship.toml
-```
+configuration.nix
+machine.nix (optional, if you use one)
+hosts/
+├── your-host/
+│   ├── default.nix
+│   └── hardware-configuration.nix
 
----
-
-# Whitelist Strategy
-
-The repository follows a strict whitelist policy.
-
-Everything is ignored by default.
-
-Only intentionally maintained configuration is included.
-
-```gitignore
-*
-
-!.gitignore
-!README.md
-
-!nixos/
-!fish/
-!ghostty/
-!helix/
-!nvim/
-!fastfetch/
-!cosmic/
-!GIMP/
-...
-```
-
-Runtime state, caches, session files, temporary files and secrets are intentionally excluded.
-
-This keeps the repository small, clean and predictable.
-
----
-
-# NixOS Layout
-
-The NixOS configuration is intentionally minimal.
-
-```text
-nixos
-├── configuration.nix
-├── host.link -> hosts/thinkpad/default.nix
-├── hosts
-│   ├── nas
-│   │   └── default.nix
-│   └── thinkpad
-│       ├── default.nix
-│       └── hardware-configuration.nix
-├── secrets
-└── README.md
-```
-
-The design is straightforward:
-
-- `configuration.nix` contains the shared system configuration.
-- `hosts/` stores machine-specific configuration.
-- `host.link` selects the active host.
-- Hardware configuration remains with the corresponding machine.
-
-No complicated module hierarchy is required.
-
----
-
-# Two Symlinks
-
-Only two symbolic links are needed.
-
-## 1. Select the current host
-
-```text
 host.link
-    └── hosts/thinkpad/default.nix
 ```
 
-`configuration.nix` imports only `host.link`.
+Getting started is simple:
 
-Changing the target changes the active machine.
+1. Clone (or copy) this `nixos/` directory to `/etc/nixos`.
+2. Create your own folder under `hosts/`.
+3. Copy your `hardware-configuration.nix`.
+4. Edit `hosts/<your-host>/default.nix`.
+5. Point `host.link` to your host:
 
----
-
-## 2. Tell NixOS where the configuration lives
-
-```text
-/etc/nixos
-    └── ~/.config/nixos
+```bash
+ln -sf hosts/<your-host>/default.nix host.link
 ```
 
-This allows rebuilding directly from the repository.
+That's it.
 
 ```bash
 sudo nixos-rebuild switch
 ```
 
-No additional wrapper scripts are required.
+No Flakes.
 
----
+No Home Manager.
 
-# Workflow
+No hunting through dozens of modules.
 
-```text
-Edit
+Just enough structure to support multiple machines while keeping everything easy to find.
 
-↓
+If you understand these few files, you understand the whole system.
 
-git status
-
-↓
-
-git add
-
-↓
-
-git commit
-
-↓
-
-git pull
-
-↓
-
-git push
-```
-
-Review every change before committing.
-
-Git history should describe intentional configuration changes instead of application runtime state.
-
----
-
-# License
-
-MIT
+Happy hacking. 🚀
