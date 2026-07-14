@@ -1,5 +1,8 @@
+keys:
+  - &weis age153kp5hjyazz49y7qpqsrkwwu3c3pfrdurw0ydegfvlyxr28dm50suklcp8
+
 creation_rules:
-  - path_regex: secrets/.*\.ya?ml$
+  - path_regex: ^secrets/.*\.(yaml|yml)$
     key_groups:
       - age:
-          - age1zlf5pvcty4vk7cu2ty4s05n8f63h9evgchug09lazkwu8lddpq0qyraf9c
+          - *weis
