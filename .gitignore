@@ -2,26 +2,59 @@
 !.gitignore
 !README.md
 
+# ===== NixOS =====
+
 !nixos/
 !nixos/**
 
-!fastfetch/
-!fastfetch/**
+# ===== Shell =====
 
 !fish/
 !fish/**
 
-!helix/
-!helix/**
+!git/
+!git/**
+
+!gh/
+!gh/config.yml
+
+!starship.toml
+
+# ===== Terminal =====
+
+!fastfetch/
+!fastfetch/**
 
 !ghostty/
 !ghostty/**
 
+!helix/
+!helix/**
+
+!lazygit/
+!lazygit/**
+
+!nvim/
+!nvim/**
+
+!superfile/
+!superfile/**
+
+!yazi/
+!yazi/**
+
+!zed/
+!zed/**
+
+# ===== Desktop =====
+
 !fcitx5/
-!fcitx5/**
-fcitx5/conf/notifications.conf
-fcitx5/conf/cached_layouts
-fcitx5/conf/classicui.conf
+!fcitx5/config
+!fcitx5/profile
+!fcitx5/conf/
+!fcitx5/conf/chttrans.conf
+!fcitx5/conf/pinyin.conf
+!fcitx5/conf/punctuation.conf
 
 !niri/
 !niri/**
@@ -29,63 +62,79 @@ fcitx5/conf/classicui.conf
 !noctalia/
 !noctalia/**
 
-!nvim/
-!nvim/**
+!systemd/
+!systemd/user/
+!systemd/user/*.service
+!systemd/user/*.timer
 
-!starship.toml
+# ===== Applications =====
 
-!git/
-!git/**
+## GIMP
 
-!gh/
-!gh/**
+!GIMP/
+!GIMP/3.0/
 
-!lazygit/
-!lazygit/**
+# Configuration (*.rc)
 
-!mpv/
-!mpv/**
+!GIMP/3.0/gimprc
+!GIMP/3.0/colorrc
+!GIMP/3.0/controllerrc
+!GIMP/3.0/dockrc
+!GIMP/3.0/extensionrc
+!GIMP/3.0/modifiersrc
+!GIMP/3.0/profilerc
+!GIMP/3.0/shortcutsrc
+!GIMP/3.0/templaterc
+!GIMP/3.0/theme.css
+!GIMP/3.0/toolrc
+!GIMP/3.0/unitrc
 
-!qt5ct/
-!qt5ct/**
+# Resources
 
-!qt6ct/
-!qt6ct/**
+!GIMP/3.0/brushes/
+!GIMP/3.0/brushes/**
+
+!GIMP/3.0/dynamics/
+!GIMP/3.0/dynamics/**
+
+!GIMP/3.0/fonts/
+!GIMP/3.0/fonts/**
+
+!GIMP/3.0/gradients/
+!GIMP/3.0/gradients/**
+
+!GIMP/3.0/palettes/
+!GIMP/3.0/palettes/**
+
+!GIMP/3.0/patterns/
+!GIMP/3.0/patterns/**
+
+!GIMP/3.0/plug-ins/
+!GIMP/3.0/plug-ins/**
+
+!GIMP/3.0/scripts/
+!GIMP/3.0/scripts/**
+
+!GIMP/3.0/splashes/
+!GIMP/3.0/splashes/**
+
+!GIMP/3.0/templates/
+!GIMP/3.0/templates/**
+
+!GIMP/3.0/themes/
+!GIMP/3.0/themes/**
+
+# Presets
+
+!GIMP/3.0/tool-options/
+!GIMP/3.0/tool-options/**
+
+## Rclone
 
 !rclone/
 !rclone/**
 
-!superfile/
-!superfile/**
-
-!systemd/
-!systemd/**
-systemd/user/*.wants/
-
-!yazi/
-!yazi/**
-
-!zathura/
-!zathura/**
-
-!zed/
-!zed/**
+# ===== User Preferences =====
 
 !mimeapps.list
 !user-dirs.dirs
-
-!GIMP/
-!GIMP/**
-
-# Runtime state
-GIMP/3.0/action-history
-GIMP/3.0/backups/
-GIMP/3.0/CrashLog
-GIMP/3.0/sessionrc
-GIMP/3.0/pluginrc
-GIMP/3.0/parasiterc
-GIMP/3.0/plug-in-settings/
-GIMP/3.0/tags.xml
-
-# Cache / Generated
-GIMP/3.0/tmp/
