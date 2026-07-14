@@ -43,9 +43,6 @@
 !yazi/
 !yazi/**
 
-!zed/
-!zed/**
-
 # ===== Desktop =====
 
 !fcitx5/
@@ -56,16 +53,13 @@
 !fcitx5/conf/pinyin.conf
 !fcitx5/conf/punctuation.conf
 
-!niri/
-!niri/**
-
-!noctalia/
-!noctalia/**
-
 !systemd/
 !systemd/user/
 !systemd/user/*.service
 !systemd/user/*.timer
+
+!cosmic/
+!cosmic/**
 
 # ===== Applications =====
 
@@ -128,11 +122,6 @@
 
 !GIMP/3.0/tool-options/
 !GIMP/3.0/tool-options/**
-
-## Rclone
-
-!rclone/
-!rclone/**
 
 # ===== User Preferences =====
 
