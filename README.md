@@ -38,7 +38,7 @@ This repository is simply a curated subset of `~/.config`.
 ├── README.md
 ├── .gitignore
 ├── justfile
-├── nixos #Hi,NixOSer I'm here.
+├── nixos #👋Hi,NixOSer I'm here.
 ├── cosmic
 ├── fastfetch
 ├── fcitx5
