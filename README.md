@@ -1,128 +1,170 @@
 # nix-inside-config
 
-> A curated Linux configuration repository with **Nix inside**, not around.
+> **Keep configuration where it belongs. Manage it where it matters.**
+>
+> **Git manages the destination, not the source.**
 
-This repository is my personal Linux configuration, built around a simple idea:
+`nix-inside-config` is a Linux configuration repository built around a simple idea:
 
-> **Only intentionally maintained configuration and personal assets belong in Git.**
+> **Keep configuration files at their original location, and manage only intentionally maintained configuration with Git.**
 
-Everything else—runtime state, caches, generated files, OAuth tokens, and secrets—is intentionally excluded.
-
----
-
-# Philosophy
-
-This repository values long-term maintainability over convenience.
-
-## Principles
-
-- One source of truth: `~/.config`
-- Explicit over implicit
-- Simplicity over abstraction
-- Configuration over runtime state
-- Maintain only what is intentional
-- Prefer understanding over automation
-
-The goal is not to collect every configuration file, but to build a clean and sustainable system that remains understandable years later.
+Unlike many NixOS repositories, this project is **not centered around Flakes, Home Manager, or complex module hierarchies**. Instead, it focuses on simplicity, readability, and long-term maintainability.
 
 ---
 
-# Why "nix-inside-config"?
+# Features
 
-Although this repository is centered around NixOS, it is **not** a Nix-only repository.
+- Configuration stays where applications expect it
+- Git manages the final configuration instead of generating it elsewhere
 
-It also contains:
-
-- terminal configuration
-- editor configuration
-- desktop configuration
-- user assets
-- Git workflow
-- wallpapers
-- personal customization
-
-Nix is an important part of the system, but not the whole system.
-
----
-
-# Design Goals
-
-This repository intentionally avoids unnecessary abstraction.
-
-Current choices:
-
-- No Home Manager
 - No Flakes
-- No chezmoi
+- No Home Manager
+- No GNU Stow
+- No unnecessary modules
 
-The current objective is to first understand every file before introducing another abstraction layer.
+- Minimal Nix files (typically well under 200 lines)
+- Whitelist-based Git repository
+
+The goal is to keep the number of Nix files as small as possible while remaining readable.
 
 ---
 
 # Repository Layout
+
+This repository is simply a curated subset of `~/.config`.
 
 ```text
 ~/.config
 ├── README.md
 ├── .gitignore
 ├── justfile
+│
 ├── nixos
 ├── cosmic
+├── fastfetch
+├── fcitx5
 ├── fish
+├── GIMP
 ├── ghostty
 ├── helix
 ├── nvim
-├── fastfetch
-├── GIMP
+├── yazi
+├── systemd
+│
 ├── git
 ├── gh
-├── systemd
-├── yazi
-
----text
-
-# Git Strategy
-
-This repository follows a **whitelist** strategy. See https://github.com/songweicn/nix-inside-config/blob/main/.gitignore
-
-Everything is ignored by default.
-
-Only carefully selected files are tracked.
-
-Advantages:
-
-- Cleaner history
-- Smaller repository
-- Less maintenance
-- No accidental secrets
-- Easier long-term review
-
-The whitelist evolves over time based on actual application behavior rather than assumptions.
+├── lazygit
+├── superfile
+│
+├── mimeapps.list
+├── starship.toml
+└── user-dirs.dirs
+```
 
 ---
 
-# NixOS
+# Whitelist Strategy
 
-The `nixos/` directory contains the system configuration.
+Everything is ignored by default.
 
-Current architecture:
+Only intentionally maintained configuration is tracked.
+
+The whitelist is defined in:
 
 ```text
-nixos/
-├── configuration.nix
-├── host.link
-└── hosts/
-    ├── thinkpad/
-    └── nas/
+~/.config/.gitignore
 ```
 
-## Design
+This avoids committing:
 
-- Single `configuration.nix`
-- Machine-specific configuration inside `hosts/`
-- `host.link` selects the active machine
-- Hardware configuration is version controlled
-- SOPS prepared for future secret management
+- runtime state
+- cache
+- session files
+- crash logs
+- temporary files
+- secrets
 
-The objective is to keep the overall configuration readable instead of heavily modularized.
+The whitelist evolves based on actual application behavior rather than assumptions.
 
+---
+
+# NixOS Layout
+
+```text
+nixos
+├── configuration.nix
+├── host.link -> hosts/thinkpad/default.nix
+├── hosts
+│   ├── nas
+│   │   └── default.nix
+│   └── thinkpad
+│       ├── default.nix
+│       └── hardware-configuration.nix
+├── secrets
+└── README.md
+```
+
+Design principles:
+
+- One shared `configuration.nix`
+- Host-specific configuration inside `hosts/`
+- Hardware configuration stays with its host
+- No unnecessary module hierarchy
+
+---
+
+# Two Symlinks
+
+The entire repository relies on only two symbolic links.
+
+## 1. Select the active host
+
+```text
+host.link
+    └── hosts/thinkpad/default.nix
+```
+
+`configuration.nix` imports only `host.link`.
+
+Switching machines only requires changing the symbolic link.
+
+---
+
+## 2. Point NixOS to this repository
+
+```text
+/etc/nixos
+    └── ~/.config/nixos
+```
+
+With this link in place, rebuilding works exactly as expected:
+
+```bash
+sudo nixos-rebuild switch
+```
+
+No wrapper scripts are required.
+
+---
+
+# Workflow
+
+```text
+Edit
+  ↓
+git status
+  ↓
+git add
+  ↓
+git commit
+  ↓
+git push
+```
+
+Every commit should represent an intentional configuration change.
+
+---
+
+# License
+
+MIT

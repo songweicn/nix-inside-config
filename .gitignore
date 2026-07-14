@@ -15,9 +15,6 @@
 !git/
 !git/**
 
-!gh/
-!gh/config.yml
-
 !starship.toml
 
 # ===== Terminal =====
@@ -73,11 +70,9 @@
 !GIMP/3.0/gimprc
 !GIMP/3.0/colorrc
 !GIMP/3.0/controllerrc
-!GIMP/3.0/dockrc
 !GIMP/3.0/extensionrc
 !GIMP/3.0/modifiersrc
 !GIMP/3.0/profilerc
-!GIMP/3.0/shortcutsrc
 !GIMP/3.0/templaterc
 !GIMP/3.0/theme.css
 !GIMP/3.0/toolrc
@@ -125,6 +120,4 @@
 
 # ===== User Preferences =====
 
-!mimeapps.list
-!user-dirs.dirs
 !justfile
