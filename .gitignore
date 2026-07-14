@@ -73,3 +73,17 @@ systemd/user/*.wants/
 
 !GIMP/
 !GIMP/**
+
+# Runtime state
+GIMP/3.0/action-history
+GIMP/3.0/backups/
+GIMP/3.0/CrashLog
+GIMP/3.0/sessionrc
+GIMP/3.0/pluginrc
+GIMP/3.0/parasiterc
+GIMP/3.0/plug-in-settings/
+GIMP/3.0/tags.xml
+
+# Cache / Generated
+GIMP/3.0/tmp/
+GIMP/3.0/internal-data/
