@@ -12,18 +12,8 @@
   services.printing.enable = true;
 
   # ===== Desktop =====
-  services.desktopManager.gnome.enable = true;
-  services.displayManager.gdm.enable = true;
-  programs.niri.enable = true;
-  programs.xwayland.enable = true;
-
-  xdg.portal = {
-    enable = true;
-
-    extraPortals = with pkgs; [
-      xdg-desktop-portal-gtk
-    ];
-  };
+  services.desktopManager.cosmic.enable = true;
+  services.displayManager.cosmic-greeter.enable = true;
 
   # ===== Chinese Input =====
 
@@ -98,35 +88,12 @@
     obsidian
     wechat
 
-    # Editors
-    zed-editor
-
     # Creative
     gimp
     inkscape
     kdePackages.kdenlive
     libheif
 
-    # Theme
-    noctalia-shell
     ];
   
-  # ===== Power Management =====
-
-  powerManagement.enable = true;
-
-  services.logind.settings.Login = {
-    HandleLidSwitch = "suspend";
-    HandleLidSwitchExternalPower = "suspend";
-  };
-
-  # ===== Data Layout =====
-
-  # ThinkPad stores user data directly under /home.
-  #
-  # Documents  -> OneDrive (rclone bisync)
-  # Pictures   -> OneDrive (rclone mount)
-  # Downloads  -> Local
-  # Projects   -> Git
-
 }
