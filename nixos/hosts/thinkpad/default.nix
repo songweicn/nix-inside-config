@@ -88,6 +88,7 @@
 
     # Terminal
     ghostty
+    wl-clipboard
 
     # Browsers
     firefox
