@@ -72,7 +72,6 @@
     NIXOS_OZONE_WL = "1";
   };
 
-
   # ===== Shell / Git / Editor =====
   programs.fish.enable = true;
 
@@ -83,8 +82,6 @@
       user.email = "songweicn@gmail.com";
     };
   };
-
-  environment.sessionVariables.EDITOR = "hx";
 
   # ===== Common Services =====
   virtualisation.docker.enable = true;
@@ -111,6 +108,7 @@
 
     # Security
     age
+    sops
 
     # Development
     git
@@ -125,11 +123,7 @@
     curl
     tailscale
     rclone
-
-    # Archive
-    zip
-    unzip
-
+    
     # Search
     ripgrep
     fd
@@ -141,7 +135,6 @@
     lazydocker
 
     # Terminal
-    wl-clipboard
     yazi
     zellij
   ];
