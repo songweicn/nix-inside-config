@@ -3,6 +3,8 @@
 > **Keep configuration where it belongs. Manage it where it matters.**
 >
 > **Git manages the destination, not the source.**
+>
+> **Simple enough to understand in one afternoon.**
 
 `nix-inside-config` is a Linux configuration repository built around a simple idea:
 
@@ -14,18 +16,16 @@ Unlike many NixOS repositories, this project is **not centered around Flakes, Ho
 
 # Features
 
-- Configuration stays where applications expect it
-- Git manages the final configuration instead of generating it elsewhere
+- Configuration stays where applications expect it.
+- Git manages the final configuration instead of generating it elsewhere.
+- No Flakes.
+- No Home Manager.
+- No GNU Stow.
+- No unnecessary modules.
+- Minimal Nix files (typically well under 200 lines).
+- Whitelist-based Git repository.
 
-- No Flakes
-- No Home Manager
-- No GNU Stow
-- No unnecessary modules
-
-- Minimal Nix files (typically well under 200 lines)
-- Whitelist-based Git repository
-
-The goal is to keep the number of Nix files as small as possible while remaining readable.
+The goal is to keep the number of Nix files as small as possible while remaining easy to understand.
 
 ---
 
@@ -69,11 +69,7 @@ Everything is ignored by default.
 
 Only intentionally maintained configuration is tracked.
 
-The whitelist is defined in:
-
-```text
-~/.config/.gitignore
-```
+The repository follows a strict whitelist strategy defined in `.gitignore`.
 
 This avoids committing:
 
@@ -115,7 +111,7 @@ Design principles:
 
 # Two Symlinks
 
-The entire repository relies on only two symbolic links.
+The entire architecture relies on only two symbolic links.
 
 ## 1. Select the active host
 
@@ -161,7 +157,7 @@ git commit
 git push
 ```
 
-Every commit should represent an intentional configuration change.
+Every commit should represent an intentional configuration change, not application runtime state.
 
 ---
 
