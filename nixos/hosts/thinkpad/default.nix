@@ -31,6 +31,7 @@
   fonts = { enableDefaultPackages = true;
   fontDir.enable = true;
   packages = with pkgs; [
+     # UI
      inter
      ibm-plex
      roboto
@@ -41,25 +42,34 @@
      liberation_ttf
      dejavu_fonts
      ubuntu-classic
+
+     # Programming
      jetbrains-mono
      fira-code
      nerd-fonts.jetbrains-mono
      nerd-fonts.fira-code
      nerd-fonts.symbols-only
-     font-awesome
-     material-icons
-     material-design-icons
+
+     # Chinese
      noto-fonts
      noto-fonts-cjk-sans
      noto-fonts-cjk-serif
-     noto-fonts-color-emoji
      sarasa-gothic
      lxgw-wenkai
      source-han-sans
      source-han-serif
      wqy_microhei
      wqy_zenhei
-     corefonts vista-fonts
+
+     # Emoji & Icons
+     font-awesome
+     noto-fonts-color-emoji
+     material-icons
+     material-design-icons
+
+     # Compatibility
+     corefonts
+     vista-fonts
    ];
 
    fontconfig = {

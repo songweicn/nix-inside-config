@@ -1,7 +1,7 @@
 {
   "logo": {
     "type": "kitty-direct",
-    "source": "~/.config/fastfetch/logo.png",
+    "source": "/home/weis/.config/fastfetch/logo.png",
     "padding": {
       "top": 1,
       "left": 4,
